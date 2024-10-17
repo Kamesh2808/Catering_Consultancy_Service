@@ -1,0 +1,861 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookings</title>
+    <link rel="stylesheet" href="bookingstyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+    
+        *{
+            font-family: 'Times New Roman', Times, serif;
+            
+          
+        }
+        
+        
+        
+        .service{
+        
+            display: flex;
+            padding: 20px 20px 20px 20px;
+            height: 350px;
+            width: 99%;
+            max-width: 100%;
+            padding-right: 0px;
+            margin-left: 0;
+            border-radius: 10px;
+        
+        }
+        
+        
+        .img1{
+            background-image: url("pic/1.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+            width: 500px;
+        
+                
+            border-radius: 10px;
+        }
+        
+        .content{
+            width: 950px;
+            height: 350px;
+            background-color:#bac1cc;
+            margin-left: 20px;
+            border-radius: 10px;
+        }
+        /*heading*/
+        .heading{
+            display: flex;
+            
+        }
+        .heading h1{
+            margin-left: 10px;
+            margin-bottom: 6px;
+        }
+        .heading i{
+            background-color: #ced9eb;
+            border-radius: 15px;
+            padding: 10px;
+            margin-left: 10px;
+            margin-bottom: 5px;
+            margin-top: 30px;
+            margin-top: 25px;
+        }
+        /*ratings*/
+        .ratings{
+            display: flex;
+           
+        
+        }
+        .ratings .value{
+            background-color: green;
+            padding: 10px;
+            border-radius: 10px;
+            margin-left: 10px;
+            color: white;
+        }
+        .ratings .star{
+            margin-top: 25px;
+            margin-left: 5px;
+            color: orange;
+           
+        }
+        .ratings .text{
+            margin-left: 5px;
+            margin-bottom: 30px;
+            padding-top: 8px;
+            font-weight: 700;
+            font-size: 17px;
+        }
+        .veri i{
+            font-size: 40px;
+            color: blue;
+        }
+        .verify {
+            font-size: 18px;
+            color: blue;
+            padding-top:7px;
+            
+        }
+        .zap{
+            font-size:20px;
+        
+            padding-top: 5px;
+            color: orange;
+        }
+        .responsive{
+            font-size: 18px;
+            font-weight: 700;
+            padding-top: 5px;
+            padding-left: 4px;
+        }
+        /*loaction*/
+        
+        .location{
+            display: flex;
+            
+        }
+        
+        
+        .location i{
+            background-color:#ced9eb;
+            padding: 10px;
+            border-radius: 50%;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 25px;
+        }
+        .location p{
+            font-size: 20px;
+            margin-left: 10px;
+            font-weight: 600;
+        
+        }
+        /*links*/
+        
+        
+        .links a{
+            text-decoration: none;
+            color: black;
+            background-color: #a4adbd;
+            font-size: 20px;
+            margin-left: 10px;
+            padding: 3px;
+            border-radius: 15px;
+        }
+        .link:hover{
+          background-color:#97a8c4;
+          color:black;
+          opacity: 0.7;
+            transition: background-color 500ms linear;
+          
+        
+        }
+        /*informtion*/
+        .information{
+            display: flex;
+           
+        }
+        
+        .information .call{
+            background-color: green;
+            border-radius: 10px;
+            padding: 10px;
+            color:white;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .information .call i{
+            color: white;
+            padding-right: 5px;
+        }
+        .information .call:hover{
+            background-color: green;
+            opacity: 0.7;
+            transition: background-color 500ms linear;
+        }
+        .information .enquiry:hover{
+            opacity: 0.7;
+           
+            transition: background-color 500ms linear;
+         
+        }
+        .information .enquiry{
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        
+        .information .enquiry i{
+            color: white;
+            padding-right: 5px;
+        }
+        
+        .information .chat{
+            border: 1px solid black;
+         
+            
+            color: black;
+            border-radius: 10px;
+            padding: 10px;
+            margin-left: 10px;
+           
+        }
+        .information .chat   i{
+            font-weight: 5000;
+            padding-right: 5px;
+            color: black;
+            font-size: 20px;
+            cursor: pointer;
+        
+        
+        }
+        .trending i{
+            color:white;
+            font-size: 20px;
+        }
+        .trending{
+            background-color: blue;
+            margin-left: 220px;
+            padding-top:8px;
+            padding-right: 3px;
+            font-weight: 300;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+        
+        }
+        .trending:hover{
+            background-color: #2d5ba6;
+           
+            transition: background-color 500ms linear;
+        }
+        
+        /*opentiming*/
+        .open{
+            display: flex;
+            
+        }
+        .open .at{
+            color: green;
+            padding-left: 15px;
+        
+            margin-top: 10px;
+        }
+        .open .time{
+            padding-left: 5px;
+            margin-top: 11px;
+           font-weight: 600;
+            margin-right: 70px;
+        }
+        .open .experience{
+          
+            margin-top: 10px;
+            margin-right: 200px;
+            
+        }
+        .open a{
+            text-decoration: none;
+            cursor: pointer;
+            outline: none;
+            font-size: 15px;
+            padding: 7px;
+            border-radius: 10px;
+            background-color: blue;
+            color:white;
+            margin-bottom: 10px;
+        }
+        
+        .open a:hover{
+            background-color: #2d5ba6;
+           
+            transition: background-color 500ms linear;
+        }
+        .open p:hover{
+            cursor: pointer;
+        }
+        /*information section */
+        .quickinformation{
+            width: 100%;
+            
+            
+          
+            height: 700px;
+            display: flex;  
+             position: relative;
+            
+        }
+        
+        .serv{
+            position: absolute;
+            width: 20%;
+            height: 300px;
+            top:310px;
+            
+        }
+        
+        .summary{
+            height: 350px;
+            width:40%;
+            
+        }
+        .type{
+            height: 350px;
+           
+            width:30%;
+        }
+        .timings{
+            height: 350px;
+           
+            width: 30%;
+        }
+        
+        /*quick information*/
+        
+        
+        .quickinformation .quicki {
+            width:80%;
+            height:700px;
+            display: flex;
+            
+            margin-right: 10px;
+            margin-top: 10px;
+            
+            border-radius: 20px;
+            background-color: #c5d1d6;
+        }
+        
+        .summary .quick{
+            font-size: 25px;
+            margin-left: 440px;
+            width: 70%;
+           color: black;
+            font-weight: 600;
+        
+            
+        }
+        .busi {
+            
+            padding-left: 20px;
+            font-size: 30px;
+            font-weight: 700;
+            color: lightslategray;
+        }
+        .busiinfo{
+            width: 50%;
+            height: 100px;
+            font-weight: 600;
+            margin-left: 20px;
+            font-size: 19px;
+        }
+        .year{
+          
+            padding-left: 20px;
+            font-size: 25px;
+            font-weight: 700;
+            color: lightslategray;
+        }
+        .number{
+                margin-left: 20px;
+                font-size: 17px;
+                font-weight: 800;
+               
+            
+                padding-bottom: 20px;
+                
+                
+        }
+        
+        
+        
+        .type .typ{
+            
+            padding-left: 20px;
+            font-size: 30px;
+            font-weight: 700;
+            margin-top: 80px;
+            color: lightslategray;
+        
+        }
+        .type .deli{
+            width: 40%;
+            height: 100px;
+            font-weight: 600;
+            margin-left: 20px;
+            font-size: 19px;
+        }
+        .timings .timi{
+        
+            padding-left: 20px;
+            font-size: 30px;
+            font-weight: 700;
+            margin-top: 80px;
+            color: lightslategray;
+        
+        }
+        .timings .day{
+             width: 80%;
+            height: 100px;
+            font-weight: 600;
+            margin-left: 20px;
+            font-size: 19px;
+        
+        }
+        
+        
+        
+        .con ul{
+            display: flex;
+            
+            
+        }
+        .ve i{
+            font-size: 40px;
+            color:green;
+            float: left;
+        
+        }
+        .con ul .co{
+          
+            font-size: 20px;
+            padding-top: 7px;
+        }
+        .ser{
+          
+            padding-left: 65px;
+            font-size: 25px;
+           
+            margin-top: 50px;
+        }
+        
+        .ser1{
+          
+            padding-left: 65px;
+            font-size: 25px;
+            
+            margin-bottom: 40px;
+        }
+        .serv{
+            position: absolute;
+            width: 20%;
+            height: 350px;
+            top:320px;
+           
+        }
+        .serves{
+            position: absolute;
+            width: 20%;
+            height: 350px;
+            top:350px;
+            left: 330px;
+        
+           
+        
+        }
+        .address{
+            width: 30%;
+            height: 700px;
+            padding-left: 40px;
+            
+             margin-top: 10px;
+            
+            border-radius: 20px;
+            background-color:#aad2e3;
+        }
+        
+        
+        .address .add{
+            
+            padding-left: 20px;
+            font-size: 30px;
+            font-weight: 700;
+            margin-top: 80px;
+            color: lightslategray;
+        
+        }
+        
+        
+        
+        .addi i{
+           
+            font-size: 30px;
+            position: absolute;
+            top:30px;
+            left: 10px;
+            
+        }
+        .addi .area{
+            
+            font-size: 20px;
+            margin-left: 50px;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+        
+        
+        .mobile{
+            display: flex;
+           
+            margin-top: 10px;
+        }
+        .mobile i:hover{
+            cursor: pointer;
+        }
+        .mobile i{
+            font-size: 30px;
+         
+            color: blue;
+           
+            border-radius: 70px;
+           padding-top: 15px;
+            margin-left: 10px;
+        }
+        .mobile .mobi{
+            font-size: 20px;
+            padding-left: 30px;
+            font-weight: 600;
+        
+        }
+        .mobile #loc{
+            padding-top:30px;
+        
+        }
+        
+           
+    .img2{
+        background-image: url({% static "pic/2.jpg" %});
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        width: 500px;
+    
+            
+        border-radius: 10px;
+    }
+    .img3{
+        background-image: url({% static "pic/3.jpg" %});
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        width: 500px;
+    
+            
+        border-radius: 10px;
+    }
+    .img4{
+        background-image: url({% static "pic/4.jpg" %});
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        width: 500px;
+    
+            
+        border-radius: 10px;
+    }
+    .img5{
+        background-image: url({% static "pic/5.jpg" %});
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        width: 500px;
+    
+            
+        border-radius: 10px;
+    }
+    .img6{
+        background-image: url({% static "pic/6.jpg" %});
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        width: 500px;
+    
+            
+        border-radius: 10px;
+    }
+    .img7{
+        background-image: url({% static "pic/7.jpg" %});
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        width: 500px;
+    
+            
+        border-radius: 10px;
+    }
+    .img8{
+        background-image: url({% static "pic/8.jpg" %});
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        width: 500px;
+    
+            
+        border-radius: 10px;
+    }
+    .img9{
+        background-image: url({% static "pic/9.jpg" %});
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        width: 500px;
+    
+            
+        border-radius: 10px;
+    }
+    .img10{
+        background-image: url({% static "pic/10.jpg" %});
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        width: 500px;
+    
+            
+        border-radius: 10px;
+    }
+    .img11{
+        background-image: url({% static "pic/11.jpg" %});
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        width: 500px;
+    
+            
+        border-radius: 10px;
+    }
+    .img12{
+        background-image: url({% static "pic/12.jpg" %});
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        width: 500px;
+    
+            
+        border-radius: 10px;
+    }
+    .img13{
+        background-image: url({% static "pic/13.jpg" %});
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        width: 500px;
+    
+            
+        border-radius: 10px;
+    }
+        .quicki{
+            position: relative;
+        }
+        
+        .booking{
+            width: 400px;
+            height: 400px;
+            
+            position: absolute;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            bottom: 0;
+            right: 50px;
+        }
+        .booking h2{
+            text-align: center;
+        }
+        .booking input,textarea{
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+        .booking input:focus::placeholder{
+            opacity: 0;
+        }
+        .booking textarea:focus::placeholder{
+            opacity: 0;
+        }
+        .booking button{
+            padding: 5px;
+            width: 80px;
+            margin-left: 160px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            transition: .9s all;
+            cursor: pointer;
+        }
+        .booking button:hover{
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            transform: rotate(-2deg) scale(1.05);
+        
+            
+        }
+    </style>
+</head>
+<body>
+    
+        <!--1st part-->
+
+        <div class="service">
+        
+            <div class="img3">
+                
+            </div>
+            <div class="content">
+                <div class="heading"><i class='bx bxs-like'></i> <h1>Amartan Events & Caterers </h1> </div>
+               <!---ratings--->
+                <div class="ratings"> 
+                <p class="value">3.9</p>
+                <div class="star">
+                <span class='bx bxs-star'></span>
+                <span class='bx bxs-star'></span>
+                <span class='bx bxs-star'></span>
+                <span class='bx bx-star' ></span>
+                <span class='bx bx-star' ></span></div>
+                <p class="text">95 ratings </p>
+                <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+                <p class="verify">Verified</p>
+                <p class="zap"><i class='bx bxs-zap' ></i></p>
+                <p class="responsive">Popular</p>
+            </div>
+            <!--location-->
+                <div class="location"> <i class='bx bxs-map'></i>
+                 <p>Mahakali Road,India</p></div>
+            <!--links-->
+                <div class="links"><a href="" class="link">Caterers</a>
+                <a href="" class="link">Wedding Foods</a></div>
+            <!--information-->
+                    <div class="information"> 
+                       <p class="call"> <i class='bx bxs-phone' > </i> 9823749034 </p>
+                       <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                       <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                       <p class="trending"><i class='bx bx-trending-up' ></i>56 people recently enquired</p>
+                       
+                    </div>
+                    <div class="open"><p class="at">Opens at</p> 
+                        <p class="time">9.00am tomorrow</p>
+                        <p class="experience">24 Years in Business</p>
+                        <a href="">Enquire Now/ Via SMS</a>
+                    </div>
+            </div>
+            
+        </div>
+       
+        </div>
+        
+    </div>
+    <!--information section -->
+    <div class="quickinformation">
+        <div class="quicki">
+        <div class="summary">
+            <p class="quick">Quick Information</p>
+            <p class="busi"> Business summary</p>
+            <p class="busiinfo">Catering service specialized in delivering delectable food option.</p>
+            <p class="year">Year Of Establishment</p>
+            <p class="number">Since 2000</p>
+        </div>
+        <!--type-->
+          <div class="type">
+            <p class="typ">Type</p>
+            <p class="deli">Delivery,Caterer</p>
+          </div> 
+         <!--timing-->  
+          <div class="timings">
+            <p class="timi">Timings</p>
+            <p class="day">Mon - Sun 9.00am - 9.00pm</p>
+          </div> 
+         
+        
+          <div class="serv">
+            <h3 class="ser"> Services</h3>
+            <div class="con">
+            <ul><p class="ve"><i class='bx bxs-checkbox-checked' ></i></p><p class="co">Home Delivery</p></ul>
+            <ul><p class="ve"><i class='bx bxs-checkbox-checked' ></i></p><p class="co">Catering Service</p></ul>
+            <ul><p class="ve"><i class='bx bxs-checkbox-checked' ></i></p><p class="co">Delivery Service</p></ul>
+            </div>
+          </div>
+          <div class="serves">
+            <h3 class="ser1"> Serves</h3>
+            <div class="con">
+                <ul><p class="ve"><i class='bx bxs-checkbox-checked' ></i></p><p class="co">Non Veg</p></ul>
+                <ul><p class="ve"><i class='bx bxs-checkbox-checked' ></i></p><p class="co">Ice Cream </p></ul>
+               
+            </div>
+
+
+          </div>
+          
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <div class="booking">
+              <input type="hidden" name="access_key" value="21b14ae8-1947-49ed-b46e-9da0ecb90d62">
+              <h2>BOOKING</h2>
+              
+              <input type="text" name="Username" placeholder="enter your name:" required>
+              <input type="tel" name="Phone no" placeholder="enter your mobile no:" required>
+              <label for="date" >Required date:</label>
+              <input type="date" name="Required date" required>
+              <textarea name="Message" id="" cols="30" rows="5" placeholder="Message" required></textarea>
+              <button>BOOK</button>
+              </form>
+        </div>
+        </div>
+        
+        
+      
+        
+        <!--address section-->
+        <div class="address">
+            <p class="add">Address</p>
+        
+        <div class="mobile">
+            <i id="loc" class='bx bxs-map'></i><p class="mobi">Bharathiyar salai,<br>Anna nagar,<br>Chennai.</p>
+
+        </div>
+
+        
+        <div class="mobile">
+            <i class='bx bxl-gmail'></i><p class="mobi">Send Enquiry by mail</p>
+        </div>
+
+        <div class="mobile">
+            <i class='bx bx-mobile' ></i><p class="mobi">Get Info Via SMS/Email</p>
+
+        </div>
+        <div class="mobile">
+            <i class='bx bxs-share' ></i><p class="mobi">Share this</p>
+
+        </div>
+        <div class="mobile">
+            <i class='bx bx-globe' ></i><p class="mobi">Visit Our Website</p>
+
+        </div>
+        <div class="mobile">
+            <i class='bx bx-star' ></i><p class="mobi">Tap to rate</p>
+
+        </div>
+
+            
+
+        </div>
+        
+    </div>
+    <!--services and serves-->
+    
+    
+
+
+
+
+
+    
+</body>
+    </html>

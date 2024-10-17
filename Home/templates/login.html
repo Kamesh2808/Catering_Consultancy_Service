@@ -1,0 +1,257 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <title>loginsite</title>
+    <link rel="icon" href="logo2.webp">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url({% static "pic/pexels-david-mackey-2296430.jpg" %})no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    
+   
+}
+.wrapper{
+    background:transparent;
+    border: 2px solid rgb(255, 255, 255,.2);
+    backdrop-filter: blue(20px);
+    box-shadow: 0 0 10px rgba(0,0,0, .2);
+    color: rgb(0, 0, 0);
+    width:420px;
+    border-radius: 10px;
+    padding:30px 40px;
+    backdrop-filter: blur(20px);
+    
+}
+
+.wrapper h1{
+    text-align: center;
+    font-size: 36px;
+}
+.wrapper .boxes{
+   position: relative;
+    width: 100%;
+    height:50px;
+   
+    margin: 30px 0;
+}
+.boxes input{
+    width:100%;
+    height:100%;
+    background: transparent;
+    border:none;
+    outline:none;
+    border:2px solid rgba(255,255,255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    padding: 20px 45px 20px 20px;
+}
+.boxes input::placeholder{
+    color: rgb(0, 0, 0);
+    font-family:'Times New Roman', Times, serif;
+
+}
+.boxes input:focus::placeholder{
+    opacity: 0;
+}
+.boxes i{
+    position: absolute;
+    right: 20px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.wrapper .remember{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: -15px 0px 15px;
+}
+.remember label input{
+    accent-color: rgb(0, 0, 0);
+    margin-right: 3px;
+}
+.remember a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin-right: 2px;
+}
+.remember a:hover{
+    text-decoration: underline;
+
+}
+.button
+{
+  
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size:18px;
+    padding: 12px 150px 12px 150px;
+    
+    border:none;
+    
+}
+
+.button a{
+    color:black;
+}
+
+.wrapper .register{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    margin: 20px 0 10px;
+    font-family:'Times New Roman', Times, serif;
+}
+.register p a {
+    color:black ;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+.register p a:hover{
+    text-decoration: underline;
+}
+</style>
+<body>
+   
+    <div class="wrapper">
+    
+        <form action="" method="POST">
+            {% csrf_token %}
+            <h1>Login</h1>
+            <div class="boxes">
+                <input type="text" placeholder="User name" required name="username1">
+                <i class='bx bxs-user'></i>
+
+            </div>
+            <div class="boxes">
+                <input type="password" placeholder="Password" id="pass" required name="password1">
+                <i class='bx bxs-lock-alt' ></i>    
+                
+
+            </div>
+            <div class="remember">
+                <label><input type="checkbox" id="show">Show Password</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button  class="button" id="login"> <a href=""  style="text-decoration: none; ">Login</a></button>
+            
+            <div class="register">
+                    <p>Don't have an account  | <a href ="signup.html">User </a><a href="caterersignup.html">|  Caterer</a></p>
+                </div>
+            
+        </form>
+
+    </div>
+    {% comment %} {% if messages %}
+    <div id="flash-messages">
+        {% for message in messages %}
+            <div class="alert alert-info">{{ message }}</div>
+        {% endfor %}
+    </div>
+{% endif %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var messageBox = document.getElementById("flash-messages");
+    if (messageBox) {
+        alert("'{{message}}'")
+        // Hide the message box after 5 seconds
+        setTimeout(function() {
+            messageBox.style.display = 'none';
+        }, 5000);  // Adjust time as needed
+    }
+});
+</script> {% endcomment %}
+{% comment %} {% if messages %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    {% for message in messages %}
+        alert("{{ message|escapejs }}");  // Escape the message for safe JS
+    {% endfor %}
+});
+</script>
+{% endif %} {% endcomment %}
+
+
+
+
+
+
+    {% comment %} {% if messages %}
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        {% for message in messages %}
+            alert("{{ message|escapejs }}");  // JavaScript alert for each message
+        {% endfor %}
+    });
+    </script>
+  
+{% endif %}
+    {% endcomment %}
+   
+</body>
+
+{% if messages %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    {% for message in messages %}
+        alert("{{ message|escapejs }}");  // Escape the message to ensure it's safe for JS
+    {% endfor %}
+});
+</script>
+{% endif %}
+
+
+
+<script>
+    //show password
+    var pass=document.getElementById("pass")
+    var show=document.getElementById("show")
+
+    show.addEventListener("click",function()
+{
+    if(show.checked)
+    {
+        pass.type="text"
+    }
+    else{
+        pass.type="password"
+    }
+})
+
+
+//alert
+{% comment %} 
+var login=document.getElementById("login")
+login.addEventListener("click",function()
+{
+    alert("Successfully login")
+}) {% endcomment %}
+
+</script>
+</html>

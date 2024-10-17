@@ -1,0 +1,71 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: beige;
+        }
+        .wrap{
+            font-size: 30px;
+            font-weight: 600;
+
+        }
+        .wrap span{
+            position: relative;
+        }
+        .wrap span::before{
+            content: "welcome";
+            animation: words 20s infinite;
+        }
+        .wrap span::after{
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: calc(100% + 8px);
+            background-color: beige;
+            border-left: 2px solid blue;
+            right: -5px;
+            animation: cursor .8s infinite, typing 20s steps(14) infinite;
+
+        }
+        @keyframes cursor{
+            to{
+                border-left: 2px solid rgb(255, 255, 255);
+            }
+        }
+        @keyframes words{
+            0%, 100%{
+                content: "WELCOME";
+            }
+         
+
+        }
+        @keyframes typing {
+            10%,15%,30%,35%,50%,55%,70%,75%,90%,95%
+            {
+                width: 0;
+            }
+            5%,20%,25%,40%,45%,60%,65%,80%,85%{
+                width: 100%;
+            }
+        }
+            </style>
+          
+</head>
+<body>
+    
+    <div class="wrap">
+      
+        <span class="text txt1"></span>
+        
+    </div>
+</body>
+</html>

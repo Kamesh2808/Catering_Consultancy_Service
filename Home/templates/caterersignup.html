@@ -1,0 +1,292 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="caterersignup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <title>caterersignup</title>
+    <link rel="icon" href="logo2.webp">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url({% static "pic/caterersignup.jpg" %})no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+   
+}
+.wrapper{
+    background:transparent;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    backdrop-filter: blue(20px);
+    box-shadow: 0 0 10px rgba(0,0,0, .2);
+    color: rgb(0, 0, 0);
+    width:420px;
+    border-radius: 10px;
+    padding:30px 40px;
+    backdrop-filter: blur(40px);
+}
+.wrapper h1{
+    text-align: center;
+    font-size: 36px;
+}
+
+.wrapper h3{
+    text-align: center;
+    font-size: 20px;
+}
+.wrapper .boxes{
+   position: relative;
+    width: 100%;
+    height:50px;
+    margin: 30px 0;
+}
+.boxes input{
+    width:100%;
+    height:100%;
+    background: transparent;
+    border:none;
+    outline:none;
+    border:2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    padding: 20px 45px 20px 20px;
+}
+.boxes input::placeholder{
+    color: rgb(0, 0, 0);
+    font-family:'Times New Roman', Times, serif;
+    
+    
+}
+.boxes input:focus::placeholder{
+    opacity: 0;
+}
+
+
+.boxes i{
+    position: absolute;
+    right: 20px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+
+.wrapper .button{
+    width:100%;
+    height:45px;
+    background: #ffffff;
+    border: none;
+    outline:none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color:#333;
+    font-weight: 600;
+
+}
+.haveaccount p a {
+    color:rgb(0, 0, 0) ;
+    text-decoration: none;
+    font-weight: 600;
+    
+
+}
+.haveaccount p a:hover{
+    text-decoration: underline;
+}
+.haveaccount{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    margin: 20px 0 10px;
+    font-family:'Times New Roman', Times, serif;
+}
+.haveaccount button
+
+{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ovrlay */
+.popup{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: .8;
+    z-index: 1;
+    position: absolute;
+    display: none;
+   
+}
+.overlay{
+    position: absolute;
+   z-index: 2;
+   display: none;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+   padding-top: 3%;
+
+    
+}
+
+.form {
+    background:transparent;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    
+    box-shadow:inset 0 0 10px rgba(141, 131, 131, 0.2);
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+
+
+    width: 85%;
+    margin: 0 auto;
+    
+    display: flex;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+   
+}
+.box1{
+   
+    height: 500px;
+    width:500px;
+    margin-left: 20px;
+    padding: 10px;
+    
+
+
+}
+.box2{
+  
+    height: 500px;
+    width:500px;
+    margin-left: 155px;
+    float: right;
+    padding: 10px;    
+}
+
+.heading {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: white;
+}
+label{
+    font-size: 20px;
+}
+
+label,input,textarea {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.form input[type="text"],textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+
+
+.sub:hover {
+    background-color:black;
+}
+input,label,textarea:hover{
+    cursor: pointer;
+}
+
+.sub{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    position: absolute;
+    top:90%;
+    left: 45%;
+}
+ input:focus::placeholder{
+    opacity: 0;
+}
+textarea:focus::placeholder{
+    opacity: 0;
+}
+
+
+
+</style>
+<body>
+   
+    <div class="wrapper">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <h1>Sign up </h1>
+            <h3>As caterer</h3>
+            <div class="boxes">
+                <input type="text" placeholder="User name" name="uname" >
+                <i class='bx bxs-user'></i>
+
+            
+            </div>
+
+
+            <div class="boxes">
+                <input type="email" placeholder="Mail id" name="mail">
+                <i class='bx bxs-envelope'></i>
+            </div>
+
+            <div class="boxes">
+                <input type="tel" placeholder="Phone no" name="phone">
+                <i class='bx bxs-phone' ></i>
+            </div>
+
+            <div class="boxes">
+                <input type="password" placeholder="Password" name="pass">
+                <i class='bx bxs-lock-alt' ></i>    
+                </div>
+
+             <div class="boxes">
+                    <input type="password" placeholder="Confirm Password" name="cpass" >
+                    <i class='bx bxs-lock-alt' ></i>    
+                    </div>
+
+
+            
+                <button type="submit" class="button">Sign Up</button>
+                <div class="haveaccount">
+                    <p> Already have an account |<a href ="login.html"> Login here</a></p>
+                </div>
+               
+            
+        </form>
+    </div>

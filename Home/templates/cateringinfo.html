@@ -1,0 +1,194 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering Company Information Form</title>
+    <link rel="stylesheet" href="cateringinfostyle.css">
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+   padding-top: 20px;
+   padding-bottom: 20px; 
+    background:white;
+    background-size: cover;
+    background-position: center;
+   
+    margin-top: 20px;
+    
+}
+
+form {
+    background:transparent;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    
+    box-shadow: 0 0 40px 1px;
+    color: rgb(0, 0, 0);
+    backdrop-filter: blur(20px);
+
+
+    width: 85%;
+    margin: 0 auto;
+    
+    display: flex;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+   
+}
+
+.box1{
+   
+    height: 500px;
+    width:500px;
+    margin-left: 20px;
+    padding: 10px;
+    
+
+
+}
+.box2{
+  
+    height: 500px;
+    width:500px;
+    margin-left: 155px;
+    float: right;
+    padding: 10px;    
+}
+
+.heading {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+label{
+    font-size: 20px;
+}
+
+label,input,textarea {
+    display: block;
+    margin-bottom: 15px;
+}
+
+input[type="text"],input[type="email"],input[type="tel"],textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    border:1px solid black;
+}
+
+
+
+a:hover {
+    background-color:black;
+}
+input,label,textarea:hover{
+    cursor: pointer;
+}
+
+a{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    top: 90%;
+    right: 50%;
+}
+ input:focus::placeholder{
+    opacity: 0;
+}
+textarea:focus::placeholder{
+    opacity: 0;
+}
+
+
+    </style>
+</head>
+<body>
+    <h1 class="heading">Catering Information Details</h1>
+    <div class="container">
+       
+        <form action="" method="POST">
+            {% csrf_token %}
+         <div class="box1"> 
+            <label >Catering Name:</label>
+            <input type="text"  name="name" required>
+
+
+            <label >Address:</label>
+            <textarea name="Address"></textarea>
+
+            
+            <label >Menu :</label>
+            <textarea  name="Menu"></textarea>
+            <label >Cuisine </label>
+            <input type="text"  name="Cuisine" placeholder="eg:indian" required>
+            <br>
+           
+
+        </div>  
+        <div class="box2">
+
+            
+
+
+            <label >Timings:</label>
+            <input type="text"  name="Availability" placeholder="eg:9.00am-9.00pm" required>
+            
+
+            <label >Experience:</label>
+            <textarea  name="Experience" placeholder="eg:5 years in Business"></textarea>
+
+
+            
+            <label >Additional Services:</label>
+            <textarea  name="Additionalservices"></textarea>
+
+            <label >About :</label>
+            <textarea  name="About"></textarea>
+            {% comment %} <label >Gallery:</label>
+            <input type="file"  name="Gallery" accept="image/*" multiple> {% endcomment %}
+
+            
+            
+            </div>
+            <a href="" id="req">Submit</a>
+            
+        </form>
+    </div>
+   
+</body>
+{% if messages %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    {% for message in messages %}
+        alert("{{ message|escapejs }}");  // Escape the message to ensure it's safe for JS
+    {% endfor %}
+});
+</script>
+{% endif %}
+
+<script>
+    var res=document.getElementById("req")
+    res.addEventListener("click",function(){
+        alert("Regerstration Successfully")
+    })
+</script>
+</html>

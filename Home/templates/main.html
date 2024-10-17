@@ -1,0 +1,1430 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering</title>
+   
+    <link rel="icon" href="logo2.webp">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+   <link rel="stylesheet" href="main.css">
+
+<style>
+    
+*{
+    padding: 0%;
+    margin: 0;
+
+}
+
+
+/*navigation css*/
+.nav {
+    width :100%;
+    background-image:linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.6)) , url({% static "pic/flat-lay-composition-mexican-food-with-copyspace.jpg" %}); 
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 700px;
+    font-style: italic;
+
+ 
+ }
+ 
+
+.navbar{
+    padding: 40px 0 40px 0;
+    position: sticky;
+    top: 0;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)) ;
+    width: 100%;
+    height: 30px;
+  
+    
+}
+nav{
+    margin-bottom: 60px;
+    position: relative;
+}
+
+
+hr{
+    background-color: black;
+    color: black;
+}
+.heading1{
+    font-weight: bold;
+    font-size: 50px;
+   color: rgb(255, 255, 255);
+   padding-right: 25%;
+   padding-left: 40px;
+}
+.u,.l,.heading1 {
+    display: inline-block;
+}
+
+.l{
+    padding-left: 25px;
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bolder ;
+ 
+}
+
+
+
+/*login button*/
+.login{
+    background-color: #c2fbd7;
+    border-radius:100px;
+    box-shadow:rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color:green;
+    cursor:pointer;
+    display:inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 30px 10px 0 9px;
+  }
+  
+  .login:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+  }
+ a:hover{
+    color: red;
+ }
+ 
+
+
+
+ /*events css*/
+
+ .services{
+    width: 100%;
+    height: 500px;
+    padding-top: 5px;
+    margin-top: 30px;
+    
+ }
+
+ .events{
+    width: 300px;
+    height: 400px; 
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  box-shadow: 10px 10px 20px 0;
+    float: left;
+    margin: 25px 40px 20px 35px;
+    border-radius: 20px;
+    background-color: white;
+    font-style: italic;
+    cursor: pointer;
+   
+
+
+ }
+ 
+ .img1{
+    width: 200px;
+    height: 150px;
+    margin: 20px 0 0 50px;
+    border-radius: 10px; 
+ }
+.events:hover{
+  transition: .5s;
+  transform: scale(1.05);
+  
+}
+.services a{
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  font-size: 16px;
+  color:green;
+  text-decoration: none;
+}
+
+.services a:hover{
+  color:green;
+}
+
+
+
+/* welcome text*/
+ .welcome{
+    display: flex;
+    justify-content: center;
+ 
+}
+
+ .weltext{
+font-size: 80px;
+color: white;
+margin-top: 280px;
+ }
+
+
+
+ 
+
+ 
+ /* enquire button */
+ .enq {
+   background-color: #c2fbd7;
+   border-radius:100px;
+   box-shadow:rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+   color:green;
+   cursor:pointer;
+   display:inline-block;
+   font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+   padding: 7px 20px;
+   text-align: center;
+   text-decoration: none;
+   transition: all 250ms;
+   border: 0;
+   font-size: 16px;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   margin: 20px 10px 0 95px;
+ }
+ 
+ .enq:hover {
+   box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+   transform: scale(1.05) rotate(-1deg);
+ }
+
+
+
+
+
+
+
+
+
+
+/*search bar css*/
+.searchBox {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+
+.searchButton {
+    color: rgb(255, 0, 0);
+    font-weight: bolder;
+    font-size: 20px;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+
+
+
+
+
+
+/*caters details*/
+.caters{
+  width: 100%;
+  height: 1370px;
+  margin-top: 50px;
+  padding-top: 0;
+
+
+}
+ .caters h1{
+  text-align: center;
+ 
+ 
+ }
+
+.details{
+  width: 600px;
+  height: 350px;
+ margin-left: 115px;
+  margin-top: 70px;
+  display: flex;
+  float:left;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  
+
+
+}
+.details:nth-child(2n-1)
+{
+  background: url({% static "pic/assortment-sweet-juicy-fruits.jpg" %});
+  background-size: cover;
+}
+
+.details:nth-child(2n)
+{
+  background: url({% static "pic/top-view-delicious-collection-exotic-fruits.jpg" %});
+  background-size: cover;
+  
+}
+
+
+.details .d1{
+  margin-top: 10px;
+  margin-left: 30px;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 3px rgb(255, 255, 255);
+
+}
+
+.details .d2{
+  margin-top: 10px;
+  margin-left: 100px;
+  color:rgb(0, 0, 0);
+  text-shadow: 4px 4px 9px rgb(255, 255, 255);
+}
+ 
+
+.details .d3{
+  margin-top: 10px;
+  margin-left: 100px;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 3px rgb(255, 255, 255);
+}
+
+.details .d4{
+  margin-top: 10px;
+  margin-left: 70px;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 9px rgb(255, 255, 255);
+}
+
+.details .d6{
+  margin-top: 10px;
+  margin-left: 30px;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 3px rgb(255, 255, 255);
+}
+
+.details .d5{
+  margin-top: 10px;
+  margin-left: 115px;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 3px rgb(255, 255, 255);
+}
+
+.details:hover{
+  box-shadow: 0px 0px 20px 7px;
+  transform: scale(1.1) ;
+  transition: 1s;
+
+  
+}
+
+
+.mored{
+border-radius: 10px;
+padding: 20px;
+padding-left: 40px;
+padding-right: 40px;
+  color: black;
+  background-color: #d6d2d2;
+  margin-left: 46%;
+  
+}
+.mored:hover{
+  box-shadow: 10px 10px 20px 5px;
+  transform: rotate(-2deg);
+  transition: .8s;
+  color: white;
+  background-color: black;
+  
+}
+
+
+/*about us*/
+.aboutus{
+  width: 100%;
+  height: 550px;
+
+
+  margin-top: 70px;
+
+}
+.aboutus h1{
+  text-align: center;
+
+}
+.aboutus .info{
+  width: 43%;
+  height:420px ;
+  
+  display: flex;
+  float: left;
+  margin-top: 40px;
+  margin-left: 4.7%;
+}
+.info p{
+  font-style: italic;
+  font-size: 25px;
+  padding: 35px;
+  padding-top: 45px;
+  line-height: 35px;
+  text-indent: 100px;
+}
+.infopic{
+background: url({% static "pic/pexels-david-mackey-2296430.jpg" %});
+background-size: cover;
+border-radius: 20px;
+cursor: pointer;
+}
+.infopic:hover{
+  transform: scale(1.1) rotate(1.5deg);
+  transition: 1s;
+}
+
+
+/*contact info*/
+
+.contactus{
+  width: 100%;
+  height: 500px;
+
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+.contact h1{
+  text-align: center;
+  font-style: italic;
+}
+.display .box{
+
+  width: 270px;
+  height: 150px;
+  display: flex;
+  float: left;
+  padding: 30px;
+  margin-left: 40px;
+  margin-top: 30px;
+  font-size: 25px;
+  font-style: italic;
+
+}  
+.display .box h5{
+  color: red;
+}
+
+/*contact form*/
+.textss .boxx input{
+  width: 350px;
+  display: flex;
+  float: left;
+  padding: 20px;
+  margin-left: 80px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+border: 1px solid black;
+
+}
+.textss .boxx input:focus::placeholder{
+ opacity: 0;
+}
+
+ 
+.textss .mess textarea{
+  padding: 20px;
+  border-radius: 20px;
+  margin-left: 80px;
+  margin-bottom: 10px;
+
+}
+
+.textss .mess textarea:focus::placeholder{
+  opacity: 0;
+}
+
+.textss .btn{
+  padding: 10px;
+  width: 130px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #d6d2d2;
+  margin-left: 47%;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.textss .btn:hover{
+  box-shadow: 10px 10px 20px 5px;
+  transform: scale(1.1) rotate(-2deg);
+  transition: .8s;
+  color: white;
+  background-color: black;
+  
+}
+
+
+/*footer*/
+.footer{
+  background-color: black;
+  width: 100%;
+  height: 50vh;
+  margin-top: 100px;
+  display: flex;
+  justify-content: end;
+  position: relative;
+  
+}
+.image{
+  width: 300px;
+  height: 40vh;
+}
+
+.image img{
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 80px;
+  bottom: 80px;
+  border-radius: 30px;
+}
+.quicklink{
+  width: 300px;
+  height: 40vh;
+  position:absolute;
+  left: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  font-size: 20px;
+  color: white;
+  
+}
+.quicklink a{
+  text-decoration: none;
+
+  
+}
+.quicklink hr{
+  color: azure;
+  width: 50%;
+}
+.socialcontact{
+  width: 300px;
+  height: 40vh;
+  position:absolute;
+  left: 850px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  font-size: 15px;
+  color: white;
+  padding-left: 15px;
+}
+.socialcontact p img{
+  width: 15px;
+  height: 15px;
+  border-radius: 7px;
+}
+
+
+
+.image1 img{
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  right: 100px;
+  bottom: 80px;
+  border-radius: 30px;
+}
+.footer .copyright{
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  right: 600px;
+}
+.hr{
+  border-color: rgb(132, 129, 129);
+  position: absolute;
+  bottom: 50px;
+  width: 88%;
+  right: 100px;
+}
+
+
+
+
+
+/* cater services */
+.first-box{
+  width: 50%;
+  height: 500px;
+  position: absolute;
+  top: 120%;
+  left: 25%;
+  background-color: white;
+  border-radius: 20px;
+ display: none;
+
+}
+.first-box .detail{
+  padding: 30px;
+  font-size: 25px;
+  line-height: 45px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+}
+
+
+
+.overlay{
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  opacity: .7;
+  position: absolute;
+ display: none;
+ top: 100%;
+ 
+}
+#Done1{
+  padding: 10px;
+  width: 100px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  left: 40%;
+  bottom: 5px;
+  cursor: pointer;
+}
+
+
+.second-box{
+  width: 50%;
+  height: 500px;
+  position: absolute;
+  top: 120%;
+  left: 25%;
+  background-color: white;
+  border-radius: 20px;
+ display: none;
+
+}
+.second-box .detail{
+  padding: 30px;
+  font-size: 25px;
+  line-height: 45px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+}
+#Done2{
+  padding: 10px;
+  width: 100px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  left: 40%;
+  bottom: 5px;
+  cursor: pointer;
+}
+
+
+.third-box{
+  width: 50%;
+  height: 500px;
+  position: absolute;
+  top: 120%;
+  left: 25%;
+  background-color: white;
+  border-radius: 20px;
+ display: none;
+
+}
+.third-box .detail{
+  padding: 30px;
+  font-size: 25px;
+  line-height: 45px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+}
+#Done3{
+  padding: 10px;
+  width: 100px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  left: 40%;
+  bottom: 5px;
+  cursor: pointer;
+}
+
+
+.fourth-box{
+  width: 50%;
+  height: 500px;
+  position: absolute;
+  top: 120%;
+  left: 25%;
+  background-color: white;
+  border-radius: 20px;
+ display: none;
+
+}
+.fourth-box .detail{
+  padding: 30px;
+  font-size: 25px;
+  line-height: 45px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+}
+#Done4{
+  padding: 10px;
+  width: 100px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  left: 40%;
+  bottom: 5px;
+  cursor: pointer;
+}
+
+
+
+.first{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 30px;
+  top: 60px;
+  border-radius: 10px;
+ 
+}
+ .star{
+  position: absolute;
+  top: 130px;
+  left: 200px;
+  color: gold;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.t{
+  position: absolute;
+  top: 100px;
+  left: 200px;
+}
+.information .call{
+  background-color: green;
+  border-radius: 10px;
+  padding: 12px 10px 12px 10px ;
+  color:white;
+  margin-left: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 190px;
+  left: 440px;
+
+}
+.information .call i{
+  color: white;
+  padding-right: 5px;
+}
+
+
+.information .enquiry{
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    padding: 12px 10px 12px 10px ;
+    margin-left: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 190px;
+    left: 300px;
+}
+
+.information .enquiry i{
+    color: white;
+    padding-right: 5px;
+}
+
+.information .chat{
+    border: 1px solid black;
+ 
+    position: absolute;
+    top: 190px;
+    left: 190px;
+    color: black;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    margin-left: 10px;
+    background-color: white;
+   
+}
+.information .chat   i{
+    font-weight: 5000;
+    padding-right: 5px;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.veri i{
+  font-size: 40px;
+  color: blue;
+  position: absolute;
+  top: 120px;
+  left: 300px;
+}
+.verify {
+  font-size: 18px;
+  color: blue;
+  padding-top:7px;
+  position: absolute;
+  top: 122px;
+  left: 340px;
+  
+}
+.zap{
+  font-size:25px;
+
+  padding-top: 5px;
+  color: orange;
+  position: absolute;
+  top: 122px;
+  left: 410px;
+  
+
+}
+.responsive{
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 5px;
+  padding-left: 4px;
+  position: absolute;
+  top: 122px;
+  left: 440px;
+}
+
+.location{
+  position: absolute;
+bottom: 50px;
+left: 10px;
+}
+
+
+.location i{
+  background-color:#ced9eb;
+  padding: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+.location p{
+  font-size: 20px;
+ 
+  font-weight: 600;
+  position: absolute;
+ left: 60px;
+ bottom: 20px;
+}
+</style>
+</head>
+<body>
+    
+    <nav>
+        
+        <div class="nav" id="home">
+            
+            <div class="navbar">
+                <h2 class="heading1">Catering Consultancy</h2>
+                <ul class="u">
+                    <li class="l"><a href="#aboutus" >Aboutus</a></li>
+                    <li class="l"><a href="#caters">Details</a></li>
+                    <li class="l"><a href="#services">Services</a></li>
+                    <li class="l"><a href="#contact">contact us</a></li>
+                    <li class="l"><a href="login.html" class="login" >login</a></li>
+                </ul>
+            </div>
+            
+                     <div class="welcome">
+                          <span class="weltext">WELCOME</span>
+                     </div>
+                     
+                     
+                     
+            <div class="searchBox">
+                <input class="searchInput" type="text" name="" placeholder="Search">
+                <button class="searchButton" href="#">
+                    <i class="material-icons">
+                        S
+                    </i>
+                </button>
+            </div>
+        </div>
+    </nav> 
+
+
+
+    <div class="services" id="services">
+       <h1 style="text-align: center; color: rgb(0, 0, 0); ">SERVICES </h1> 
+        <div class="events">
+           <img src={% static "pic/w.jpg  " %} alt="" class="img1">
+            <p style="text-align: center; font-size: 25PX; font-weight: bold; margin-top: 10px;">WEDDING</p>
+            <p style="text-align: center; font-size: 20pX;  margin-top: 30px;">Elevate your wedding experience with exquisite cuisine crafted with love and attention to detail by our expert team.</p>
+            <button class="enq" role="button"  onclick="show1()">Enquirenow</button>
+        </div>
+        <div class="events">
+            <img src={% static "pic/c.webp" %} alt="" class="img1">
+            <p style="text-align: center; font-size: 25PX; font-weight: bold; margin-top: 10px;">CORPORATE EVENTS</p>
+            <p style="text-align: center; font-size: 20pX;  margin-top: 30px; ">Impress your guests and colleagues alike with our seamless corporate event catering and impeccable service. </p>
+            <button class="enq" role="button" onclick="show2()">Enquirenow</button>
+        </div>
+        <div class="events">
+            <img src={% static "pic/p2.webp"%} alt="" class="img1">
+            <p style="text-align: center; font-size: 25PX; font-weight: bold; margin-top: 10px;">PRIVATE PARTIES</p>
+            <p style="text-align: center; font-size: 20pX;  margin-top: 30px;">Elevate your private gatherings with our personalized event planning and exquisite culinary offerings, making every celebration truly special. </p>
+            <button class="enq" role="button" onclick="show3()">Enquirenow</button>
+        </div>
+        <div class="events">
+            <img src={% static "pic/p1.webp"%} alt="" class="img1">
+            <p style="text-align: center; font-size: 25PX; font-weight: bold; margin-top: 10px;">BIRTHDAY EVENTS</p>
+            <p style="text-align: center; font-size: 20pX;  margin-top: 30px;">Elevate your private gatherings with our personalized event planning and exquisite culinary offerings, making every celebration truly special. </p>
+             <button class="enq" role="button" onclick="show4()">Enquirenow</button>
+        </div>
+    </div>
+
+
+    <!-- services detail overlay -->
+
+<div class="overlay"></div>
+<div class="first-box" id="first">
+    <div class="detail"><p><i class='bx bxs-star s'></i>we make sure to make your wedding more memorable by serving the best food to your and your guests</p>
+         <p><i class='bx bxs-star s1'></i>Crafting culinary dreams into reality, our wedding catering elevates every moment of your special day. From exquisite hors d'oeuvres to decadent desserts, our menus reflect your unique love story. With meticulous attention to detail and a passion for perfection, we ensure your celebration is a feast for the senses. Trust us to turn your wedding day into an unforgettable culinary experience.
+        </p>
+        <button id="Done1" onclick="hide1()">Done</button>
+    </div>
+</div>
+
+
+
+<div class="second-box" id="second">
+    <div class="detail"><p><i class='bx bxs-star s'></i>we make sure to make your wedding more memorable by serving the best food to your and your guests</p>
+         <p><i class='bx bxs-star s1'></i> Elevate your corporate events with our tailored solutions, blending professionalism with unforgettable experiences. From impeccable catering to seamless logistics, we handle every detail to ensure your event is a success. Trust our expertise to impress your guests and colleagues alike, leaving a lasting impression that reflects your company's values. Let us transform your vision into a reality, creating memorable moments that drive your business forward.
+
+        </p>
+        <button id="Done2" onclick="hide2()">Done</button>
+    </div>
+</div>
+   
+
+<div class="third-box" id="third">
+    <div class="detail"><p><i class='bx bxs-star s'></i>we make sure to make your wedding more memorable by serving the best food to your and your guests</p>
+         <p><i class='bx bxs-star s1'></i> Turn your private party into an extraordinary event with our bespoke services tailored just for you. From intimate gatherings to lavish affairs, we cater to your every need and desire. Let us handle the details while you enjoy unforgettable moments with your loved ones. With our expertise and passion, your private event will be one to remember.
+
+        </p>
+        <button id="Done3" onclick="hide3()">Done</button>
+    </div>
+</div>
+
+
+<div class="fourth-box" id="fourth">
+    <div class="detail"><p><i class='bx bxs-star s'></i>we make sure to make your wedding more memorable by serving the best food to your and your guests</p>
+         <p><i class='bx bxs-star s1'></i> Make your birthday unforgettable with our event services designed to celebrate your uniqueness. Whether you're turning one or one hundred, we believe every birthday deserves to be celebrated in style. From themed decorations to personalized menus, we tailor every aspect of your party to reflect your personality and preferences. 
+
+        </p>
+        <button id="Done4" onclick="hide4()">Done</button>
+    </div>
+</div>
+
+
+
+
+
+     <div class="caters" id="caters">
+           <div class="background"></div>
+
+        <h1>TOP CATERS</h1>
+        <div class="details">
+               <h1 class="d1">Bhimaa Catering & Wedding Planners</h1>
+               <img src= {% static "pic/logo1.jpg" %}  alt="" class="first">
+               <h2 class="t">Rating</h2>
+               <div class="star">
+                <span class='bx bxs-star'></span>
+                <span class='bx bxs-star'></span>
+                <span class='bx bxs-star'></span>
+                <span class='bx bxs-star-half' ></span>
+                <span class='bx bx-star' ></span></div>
+                    
+                <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+                <p class="verify">Verified</p>
+                <p class="zap"><i class='bx bxs-zap' ></i></p>
+                <p class="responsive">Responsive</p>
+                
+                <div class="information"> 
+                    <p class="call"> <i class='bx bxs-phone' > </i> 0123456308 </p>
+                    <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                    <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                    
+                    
+                 </div>    
+                
+                 <div class="location"> <i class='bx bxs-map'></i>
+                    <p>Pollachi,Tamilnadu</p></div>
+            
+        </div>
+        <div class="details">
+               <h1 class="d2">Sri Maha Catering Service</h1>
+               <img src={% static "pic/log06.jpeg"%} alt="" class="first">
+               <h2 class="t">Rating</h2>
+               <div class="star">
+                <span class='bx bxs-star'></span>
+                <span class='bx bxs-star'></span>
+                <span class='bx bxs-star'></span>
+                <span class='bx bxs-star-half' ></span>
+                <span class='bx bx-star' ></span></div>
+
+                <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+                <p class="verify">Verified</p>
+                <p class="zap"><i class='bx bxs-zap' ></i></p>
+                <p class="responsive">Responsive</p>
+                
+                <div class="information"> 
+                    <p class="call"> <i class='bx bxs-phone' > </i> 0123456308 </p>
+                    <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                    <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                    
+                    
+                 </div>
+                 <div class="location"> <i class='bx bxs-map'></i>
+                    <p>Pollachi,Tamilnadu</p></div>
+        </div>
+
+
+        <div class="details">
+            <h1 class="d3">Rathna Catering Service</h1>
+            <img src={% static "pic/logo2.jpg" %} alt="" class="first">
+            <h2 class="t">Rating</h2>
+            <div class="star">
+             <span class='bx bxs-star'></span>
+             <span class='bx bxs-star'></span>
+             <span class='bx bxs-star'></span>
+             <span class='bx bxs-star-half' ></span>
+             <span class='bx bx-star' ></span></div>
+
+             <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+             <p class="verify">Verified</p>
+             <p class="zap"><i class='bx bxs-zap' ></i></p>
+             <p class="responsive">Responsive</p>
+             
+             <div class="information"> 
+                 <p class="call"> <i class='bx bxs-phone' > </i> 0123456308 </p>
+                 <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                 <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                 
+                 
+              </div>
+              <div class="location"> <i class='bx bxs-map'></i>
+                <p>Pollachi,Tamilnadu</p></div>
+        </div>
+
+
+
+        <div class="details">
+            <h1 class="d4">Anandham Atoz Catering Service </h1>
+            <img src={% static "pic/logo4.jpeg"%} alt="" class="first">
+            <h2 class="t">Rating</h2>
+            <div class="star">
+             <span class='bx bxs-star'></span>
+             <span class='bx bxs-star'></span>
+             <span class='bx bxs-star'></span>
+             <span class='bx bxs-star-half' ></span>
+             <span class='bx bx-star' ></span></div>
+
+             <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+             <p class="verify">Verified</p>
+             <p class="zap"><i class='bx bxs-zap' ></i></p>
+             <p class="responsive">Responsive</p>
+             
+             <div class="information"> 
+                 <p class="call"> <i class='bx bxs-phone' > </i> 0123456308 </p>
+                 <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                 <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                 
+                 
+              </div>
+              <div class="location"> <i class='bx bxs-map'></i>
+                <p>Pollachi,Tamilnadu</p></div>
+        </div>
+
+
+
+        <div class="details">
+            <h1 class="d5">Jaya Stores and Catering</h1>
+            <img src={% static "pic/logo5.jpeg" %} alt="" class="first">
+            <h2 class="t">Rating</h2>
+            <div class="star">
+             <span class='bx bxs-star'></span>
+             <span class='bx bxs-star'></span>
+             <span class='bx bxs-star'></span>
+             <span class='bx bxs-star-half' ></span>
+             <span class='bx bx-star' ></span></div>
+
+             <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+             <p class="verify">Verified</p>
+             <p class="zap"><i class='bx bxs-zap' ></i></p>
+             <p class="responsive">Responsive</p>
+             
+             <div class="information"> 
+                 <p class="call"> <i class='bx bxs-phone' > </i> 0123456308 </p>
+                 <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                 <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                 
+                 
+              </div>
+              <div class="location"> <i class='bx bxs-map'></i>
+                <p>Pollachi,Tamilnadu</p></div>
+        </div>
+
+
+
+        <div class="details">
+            <h1 class="d6">Royal Caterers and Event Management</h1>
+            <img src={% static "pic/logo3.jpeg" %} alt="" class="first">
+            <h2 class="t">Rating</h2>
+            <div class="star">
+             <span class='bx bxs-star'></span>
+             <span class='bx bxs-star'></span>
+             <span class='bx bxs-star'></span>
+             <span class='bx bxs-star-half' ></span>
+             <span class='bx bx-star' ></span></div>
+
+             <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+             <p class="verify">Verified</p>
+             <p class="zap"><i class='bx bxs-zap' ></i></p>
+             <p class="responsive">Responsive</p>
+             
+             <div class="information"> 
+                 <p class="call"> <i class='bx bxs-phone' > </i> 0123456308 </p>
+                 <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                 <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                 
+                 
+              </div>
+              <div class="location"> <i class='bx bxs-map'></i>
+                <p>Pollachi,Tamilnadu</p></div>
+        </div>
+        
+     </div>
+
+
+     <a href="index.html" class="mored" target="_blank ">MORE</a>
+
+
+     <div class="aboutus" id="aboutus">
+        <h1>ABOUTUS</h1>
+        <div class="info">
+            <p>Filling every occasion with great food and service. We dummy company, situated at area, city, state are known for providing truly exquisite cuisine accompanied by dedicated service. We give our customers the option of choosing from a packaged catering menu or a customized menu. We deliver world class dining experience and to suit everyone's taste, we offer a wide range of cuisines with a menu boasting of many delicacies across global cuisines.</p></div>
+        <div class="info infopic">
+       
+        </div>
+     </div>
+
+
+
+   <div class="contactus" id="contact">
+    <div class="whole">
+        <!--for information of contacts-->
+            <div class="contact">
+                
+                <h1 >
+                    Contact us
+                </h1>
+
+             <div class="display">
+
+            <div class="box">
+                 <div class="ico">
+                    <div class="icon"><i class='bx bxs-map'></i></div>
+                </div>
+                    
+                        <div class="text">
+                            <h5>Our office address </h5>
+                            
+                            <p>MCET CAMPUS, <br> Udumalai Road ,<br>Pollachi-642003. </p>
+                        
+                         </div>
+            </div>
+
+            <div class="box">
+                <div class="ico">
+                    <div class="icon"><i class='bx bxs-phone' ></i></div> </div>
+                    <div class="text">
+                        <h5>Phone</h5>
+                        <p> 0987654321</p>
+                    </div>
+            </div>
+
+             <div class="box">
+                    <div class="ico">
+                    <div class="icon"><i class='bx bxl-gmail' ></i></div></div>
+                    <div class="text">
+                        <h5>General enquiries</h5>
+                        <p> ccsproject486@gmail.com</p>
+                    </div>
+            </div>
+        
+             <div class="box">
+                    <div class="ico">
+                    <div class="icon"><i class='bx bxs-calendar'></i></div></div>
+                    <div class="text">
+                        
+                        <h5>Timings </h5>
+                        <p>Mon-Sun:<br>10.00AM-7.00PM</p>
+                    </div>
+            </div>
+                
+            </div>
+
+        </div>
+        <!--for text in contact inputs-->
+        <div class="texting">
+          <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="d7a2bce2-839c-4b8d-85ce-6c24ee3f517b">
+          <div class="textss">
+              <div class="boxx">
+                  <input type="text" name="Username" placeholder="Full name:" required>
+              </div>
+  
+              <div class="boxx">
+                  <input type="email" name="Email" placeholder="Email id:" required>
+              </div>
+
+              <div class="boxx">
+                  <input type="tel" name="Phone no" placeholder="Mobile number:" required>
+              </div>
+  
+          
+              <div class="mess">
+                 <textarea name="Message" placeholder="Enter the message:" rows="3" cols="170" ></textarea>
+                 
+              </div>
+              <button class="btn" role="button" style="font-family: 'Times New Roman', Times, serif;">SUBMIT</button>
+          </div>
+           </form>
+      </div>
+</div>    
+</div>   
+         
+  
+
+
+  
+  
+
+
+
+
+
+
+<div class="footer">
+  <div class="image">
+      <img src={% static "pic/c.jpg" %}  alt="">
+  </div>
+  <div class="quicklink">
+      <h2>Quick Links</h2>
+      
+      <a href="#home"><i class='bx bx-home'></i> Home</a>
+      <hr>
+      <a href="#services"><i class='bx bx-food-menu'></i> Serivices</a>
+      <hr>
+      <a href="#caters">  <i class='bx bx-cart'></i>Caters</a>
+      <hr>
+      <a href="#aboutus"> <i class='bx bx-question-mark' ></i>Aboutus</a>
+      <hr>
+      <a href="#contact"> <i class='bx bx-phone' ></i> contact</a>
+  </div>
+  <div class="socialcontact">
+      <h2 style="font-size: 35px;">Contact</h2>
+      <p><i class='bx bxs-location-plus' ></i> Catering Services,<br>  MCET,Pollachi,CBE</p>
+      
+      <p><i class='bx bxs-phone-call'></i> +914000030000</p>
+      <p><img src={% static "pic/fb.webp" %} alt=""> CATERS</p>
+      <p><img src={% static "pic/ins.png" %} alt=""> CATERS</p>
+      <p><i class='bx bxs-envelope'></i> catering2024@gamil.com</p>
+      <p><i class='bx bxs-window-alt'></i> https:/cateringserivices.com</p>
+      
+  </div>
+  <div class="image1">
+      <img src= {% static "pic/foot.jpg" %}  alt="">
+  </div>
+ <hr class="hr">
+  <p class="copyright">Copyright © cateringservices 2024. All rights reserved.</p>
+</div>
+
+
+
+
+
+
+
+   
+</body>
+{% if messages %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    {% for message in messages %}
+        alert("{{ message|escapejs }}");  // Escape the message to ensure it's safe for JS
+    {% endfor %}
+});
+</script>
+{% endif %}
+
+<script >
+    
+// /first
+var lay=document.querySelector(".overlay")
+    var box1=document.getElementById("first")
+
+function show1()
+{
+        lay.style.display="block"
+        box1.style.display="block"
+}
+
+
+function hide1()
+{
+    lay.style.display="none"
+    box1.style.display="none"
+}
+
+
+
+// second
+var lay=document.querySelector(".overlay")
+var box2=document.getElementById("second")
+
+function show2()
+{
+    lay.style.display="block"
+    box2.style.display="block"
+}
+
+
+function hide2()
+{
+    lay.style.display="none"
+    box2.style.display="none"
+}
+
+
+
+// third
+
+var lay=document.querySelector(".overlay")
+var box3=document.getElementById("third")
+
+function show3()
+{
+    lay.style.display="block"
+    box3.style.display="block"
+}
+
+
+function hide3()
+{
+    lay.style.display="none"
+    box3.style.display="none"
+}
+
+
+
+
+// fourth
+
+var lay=document.querySelector(".overlay")
+var box4=document.getElementById("fourth")
+
+function show4()
+{
+    lay.style.display="block"
+    box4.style.display="block"
+}
+
+
+function hide4()
+{
+    lay.style.display="none"
+    box4.style.display="none"
+}
+</script>
+</html>

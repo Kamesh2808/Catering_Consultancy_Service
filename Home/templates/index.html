@@ -1,0 +1,995 @@
+{%load static%}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>services</title>
+    <link rel="stylesheet" href="services.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    *{
+    font-family: 'Times New Roman', Times, serif;
+    
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    background:linear-gradient(rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.3)) , url({% static "pic/sbg.jpg" %}) fixed ;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+   
+
+}
+/*header*/
+.header{
+    text-align: center;
+    
+    width: fit-content;
+    margin-left: 350px;
+   margin-top: 30px;
+ background-color:rgb(198, 226, 250);
+
+ border-radius: 25px;
+ padding: 10px;
+
+    
+}
+.header h1{
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+
+
+    
+}
+/*headeer end*/
+.main{
+    width: 100%;
+    height:100%;
+    background-color: transparent;
+}
+
+.service{
+    background-color:rgb(198, 226, 250);
+
+
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 400px;
+    width: 80%;
+    margin-top: 70px;
+    margin-left: 150px;
+    border-radius: 20px;
+
+}
+
+
+.img1{
+    background-image: url({% static "pic/1.jpg" %});
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+.content{
+    width: 800px;
+    height: 300px;
+    background-color:rgb(184, 183, 183);
+    margin-left: 20px;
+    border-radius: 10px;
+}
+/*heading*/
+.heading{
+    display: flex;
+    
+}
+.heading h1{
+    margin-left: 10px;
+    margin-bottom: 6px;
+}
+.heading i{
+    background-color: #ced9eb;
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    margin-top: 25px;
+}
+/*ratings*/
+.ratings{
+    display: flex;
+   
+
+}
+.ratings .value{
+    background-color: green;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    color: white;
+}
+.ratings .star{
+    margin-top: 25px;
+    margin-left: 5px;
+    color: orange;
+   
+}
+.ratings .text{
+    margin-left: 5px;
+    margin-bottom: 30px;
+    padding-top: 8px;
+    font-weight: 700;
+    font-size: 17px;
+}
+.veri i{
+    font-size: 40px;
+    color: blue;
+}
+.verify {
+    font-size: 18px;
+    color: blue;
+    padding-top:7px;
+    
+}
+.zap{
+    font-size:20px;
+
+    padding-top: 5px;
+    color: orange;
+}
+.responsive{
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 5px;
+    padding-left: 4px;
+}
+/*loaction*/
+
+.location{
+    display: flex;
+    
+}
+
+
+.location i{
+    background-color:#ced9eb;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+.location p{
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: 600;
+
+}
+/*links*/
+
+
+.links a{
+    text-decoration: none;
+    color: black;
+    background-color: #a4adbd;
+    font-size: 20px;
+    margin-left: 10px;
+    padding: 3px;
+    border-radius: 15px;
+}
+.link:hover{
+  background-color:#97a8c4;
+  color:black;
+  opacity: 0.7;
+    transition: background-color 500ms linear;
+  
+
+}
+/*informtion*/
+.information{
+    display: flex;
+   
+}
+
+.information .call{
+    background-color: green;
+    border-radius: 10px;
+    padding: 10px;
+    color:white;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.information .call i{
+    color: white;
+    padding-right: 5px;
+}
+.information .call:hover{
+    background-color: green;
+    opacity: 0.7;
+    transition: background-color 500ms linear;
+}
+.information .enquiry:hover{
+    opacity: 0.7;
+   
+    transition: background-color 500ms linear;
+ 
+}
+.information .enquiry{
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.information .enquiry i{
+    color: white;
+    padding-right: 5px;
+}
+
+.information .chat{
+    border: 1px solid black;
+ 
+    
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 10px;
+   
+}
+.information .chat   i{
+    font-weight: 5000;
+    padding-right: 5px;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+
+
+}
+.trending i{
+    color:white;
+    font-size: 20px;
+}
+.trending{
+    background-color: blue;
+    margin-left: 220px;
+    padding-top:8px;
+    padding-right: 3px;
+    font-weight: 300;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+
+}
+.trending:hover{
+    background-color: #2d5ba6;
+   
+    transition: background-color 500ms linear;
+}
+{% comment %} /*part 1image*/
+.img1{
+    background-image: url("pic/1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-left: 40px;
+    border-radius: 10px;
+} {% endcomment %}
+/*part 2 image*/
+
+.img2{
+    background-image: url({% static "pic/2.jpg" %});
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+/*part 3 image*/
+
+.img3{
+    background-image: url({% static "pic/3.jpg" %});
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+/*part 4 image*/
+
+.img4{
+    background-image: url({% static "pic/4.jpg" %});
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+.img5{
+    background-image: url({% static "pic/5.jpg" %});
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+.img6{
+    background-image: url({% static "pic/6.jpg" %});
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+.img7{
+    background-image: url({% static "pic/7.jpg" %});
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+.img8{
+    background-image: url({% static "pic/8.jpg" %});
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+.img9{
+    background-image: url({% static "pic/9.jpg" %});
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+.img10{
+    background-image: url({% static "pic/10.jpg" %});
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+.img11{
+    background-image: url({% static "pic/11.jpg" %});
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+.img12{
+    background-image: url({% static "pic/12.jpg" %});
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+.img13{
+    background-image: url({% static "pic/13.jpg" %});
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+
+</style>
+<body>
+   
+    <div class="header">
+        <h1> CATERING SERVICES DETAILS</h1>
+    </div>
+    <div class="main">
+        <!--1st part-->
+
+  <a href="booking1.html">
+    <div class="service">
+        
+        <div class="img1">
+            
+        </div>
+        <div class="content">
+            <div class="heading"><i class='bx bxs-like'></i> <h1>Swastik Caterers </h1> </div>
+           <!---ratings--->
+            <div class="ratings"> 
+            <p class="value">4.4</p>
+            <div class="star">
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star-half' ></span>
+            <span class='bx bx-star' ></span></div>
+            <p class="text">162 ratings </p>
+            <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+            <p class="verify">Verified</p>
+            <p class="zap"><i class='bx bxs-zap' ></i></p>
+            <p class="responsive">Responsive</p>
+        </div>
+        <!--location-->
+            <div class="location"> <i class='bx bxs-map'></i>
+             <p>Vasai West ,India</p></div>
+        <!--links-->
+            <div class="links"><a href="" class="link">Caterers</a>
+            <a href="" class="link">Chinese</a></div>
+        <!--information-->
+                <div class="information"> 
+                   <p class="call"> <i class='bx bxs-phone' > </i> 0123456308 </p>
+                   <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                   <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                   <p class="trending"><i class='bx bx-trending-up' ></i>69 people recently enquired</p>
+                   
+                </div>
+        </div>
+        
+    </div>
+  </a>
+
+    <!--2nd part-->
+    <a href="booking2.html">
+        <div class="service">
+        
+            <div class="img2">
+                
+            </div>
+            <div class="content">
+                <div class="heading"><i class='bx bxs-like'></i> <h1>Aaswad Caterers </h1> </div>
+               <!---ratings--->
+                <div class="ratings"> 
+                <p class="value">4.9</p>
+                <div class="star">
+                <span class='bx bxs-star'></span>
+                <span class='bx bxs-star'></span>
+                <span class='bx bxs-star'></span>
+                <span class='bx bxs-star'></span>
+                <span class='bx bxs-star'></span></div>
+                <p class="text">89 ratings </p>
+                <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+                <p class="verify">Verified</p>
+                <p class="zap"><i class='bx bxs-zap' ></i></p>
+                <p class="responsive">Trending</p>
+            </div>
+            <!--location-->
+                <div class="location"> <i class='bx bxs-map'></i>
+                 <p>Vikhroli East,India</p></div>
+            <!--links-->
+                <div class="links"><a href="" class="link">Caterers</a>
+                <a href="" class="link">Veg Caterers</a></div>
+            <!--information-->
+                    <div class="information"> 
+                       <p class="call"> <i class='bx bxs-phone' > </i> 4789234952 </p>
+                       <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                       <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                       <p class="trending"><i class='bx bx-trending-up' ></i>75 people recently enquired</p>
+                       
+                    </div>
+            </div>
+            
+        </div>
+    </a>
+
+
+    <!--3rd part-->
+    <a href="booking3.html"> 
+        <div class="service">
+        
+        <div class="img3">
+            
+        </div>
+        <div class="content">
+            <div class="heading"><i class='bx bxs-like'></i> <h1>Amartan Events & Caterers </h1> </div>
+           <!---ratings--->
+            <div class="ratings"> 
+            <p class="value">3.9</p>
+            <div class="star">
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bx-star' ></span>
+            <span class='bx bx-star' ></span></div>
+            <p class="text">95 ratings </p>
+            <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+            <p class="verify">Verified</p>
+            <p class="zap"><i class='bx bxs-zap' ></i></p>
+            <p class="responsive">Popular</p>
+        </div>
+        <!--location-->
+            <div class="location"> <i class='bx bxs-map'></i>
+             <p>Mahakali Road,India</p></div>
+        <!--links-->
+            <div class="links"><a href="" class="link">Caterers</a>
+            <a href="" class="link">Wedding Foods</a></div>
+        <!--information-->
+                <div class="information"> 
+                   <p class="call"> <i class='bx bxs-phone' > </i> 9823749034 </p>
+                   <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                   <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                   <p class="trending"><i class='bx bx-trending-up' ></i>56 people recently enquired</p>
+                   
+                </div>
+        </div>
+        
+    </div>
+</a>
+   
+    <!--4th part-->
+    <a href="booking4.html">
+        <div class="service">
+        
+            <div class="img4">
+                
+            </div>
+            <div class="content">
+                <div class="heading"><i class='bx bxs-like'></i> <h1>Joshi Catering Services </h1> </div>
+               <!---ratings--->
+                <div class="ratings"> 
+                <p class="value">4.2</p>
+                <div class="star">
+                <span class='bx bxs-star'></span>
+                <span class='bx bxs-star'></span>
+                <span class='bx bxs-star'></span>
+                <span class='bx bxs-star'></span>
+                <span class='bx bx-star' ></span></div>
+                <p class="text">103 ratings </p>
+                <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+                <p class="verify">Verified</p>
+                <p class="zap"><i class='bx bxs-zap' ></i></p>
+                <p class="responsive">Responsive</p>
+            </div>
+            <!--location-->
+                <div class="location"> <i class='bx bxs-map'></i>
+                 <p>Bharathiyar Salai,India</p></div>
+            <!--links-->
+                <div class="links"><a href="" class="link">Caterers</a>
+                <a href="" class="link">Non Veg </a></div>
+            <!--information-->
+                    <div class="information"> 
+                       <p class="call"> <i class='bx bxs-phone' > </i> 9238394621</p>
+                       <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                       <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                       <p class="trending"><i class='bx bx-trending-up' ></i>43 people recently enquired</p>
+                       
+                    </div>
+            </div>
+            
+        </div>
+    </a>
+
+
+    <!--5th part-->
+    <a href="booking5.html">
+        <div class="service">
+        
+        <div class="img5">
+            
+        </div>
+        <div class="content">
+            <div class="heading"><i class='bx bxs-like'></i> <h1>Mahi Caterers </h1> </div>
+           <!---ratings--->
+            <div class="ratings"> 
+            <p class="value">3.8</p>
+            <div class="star">
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bx-star' ></span>
+            <span class='bx bx-star' ></span></div>
+            <p class="text">100 ratings </p>
+            <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+            <p class="verify">Verified</p>
+            <p class="zap"><i class='bx bxs-zap' ></i></p>
+            <p class="responsive">Popular</p>
+        </div>
+        <!--location-->
+            <div class="location"> <i class='bx bxs-map'></i>
+             <p>Subramaniyapuram ,India</p></div>
+        <!--links-->
+            <div class="links"><a href="" class="link">Caterers</a>
+            <a href="" class="link">South Indian</a></div>
+        <!--information-->
+                <div class="information"> 
+                   <p class="call"> <i class='bx bxs-phone' > </i> 9876543291 </p>
+                   <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                   <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                   <p class="trending"><i class='bx bx-trending-up' ></i>50 people recently enquired</p>
+                   
+                </div>
+        </div>
+        
+    </div></a>
+
+
+    <!--6th part-->
+    <a href="booking6.html">
+        <div class="service">
+        
+        <div class="img6">
+            
+        </div>
+        <div class="content">
+            <div class="heading"><i class='bx bxs-like'></i> <h1>KS Services </h1> </div>
+           <!---ratings--->
+            <div class="ratings"> 
+            <p class="value">4.2</p>
+            <div class="star">
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star-half' ></span>
+            <span class='bx bx-star' ></span></div>
+            <p class="text">130ratings </p>
+            <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+            <p class="verify">Verified</p>
+            <p class="zap"><i class='bx bxs-zap' ></i></p>
+            <p class="responsive">Responsive</p>
+        </div>
+        <!--location-->
+            <div class="location"> <i class='bx bxs-map'></i>
+             <p>JN road ,Mumbai</p></div>
+        <!--links-->
+            <div class="links"><a href="" class="link">Caterers</a>
+            <a href="" class="link">Biryani</a></div>
+        <!--information-->
+                <div class="information"> 
+                   <p class="call"> <i class='bx bxs-phone' > </i> 3689264798 </p>
+                   <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                   <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                   <p class="trending"><i class='bx bx-trending-up' ></i>84 people recently enquired</p>
+                   
+                </div>
+        </div>
+        
+    </div></a>
+
+
+
+    <!--7th part-->
+    <a href="booking7.html">
+        <div class="service">
+        
+        <div class="img7">
+            
+        </div>
+        <div class="content">
+            <div class="heading"><i class='bx bxs-like'></i> <h1>New Bombay Caterers </h1> </div>
+           <!---ratings--->
+            <div class="ratings"> 
+            <p class="value">4.5</p>
+            <div class="star">
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star' ></span>
+            <span class='bx bx-star' ></span></div>
+            <p class="text">145 ratings </p>
+            <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+            <p class="verify">Verified</p>
+            <p class="zap"><i class='bx bxs-zap' ></i></p>
+            <p class="responsive">Trending</p>
+        </div>
+        <!--location-->
+            <div class="location"> <i class='bx bxs-map'></i>
+             <p>Mata Mandir ,India</p></div>
+        <!--links-->
+            <div class="links"><a href="" class="link">Caterers</a>
+            <a href="" class="link">Punjabi</a></div>
+        <!--information-->
+                <div class="information"> 
+                   <p class="call"> <i class='bx bxs-phone' > </i> 6789234560 </p>
+                   <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                   <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                   <p class="trending"><i class='bx bx-trending-up' ></i>110people recently enquired</p>
+                   
+                </div>
+        </div>
+        
+    </div></a>
+
+
+
+    <!--8th part-->
+    <a href="booking8.html">
+        <div class="service">
+        
+        <div class="img8">
+            
+        </div>
+        <div class="content">
+            <div class="heading"><i class='bx bxs-like'></i> <h1>Sakshi Caterers </h1> </div>
+           <!---ratings--->
+            <div class="ratings"> 
+            <p class="value">3.5</p>
+            <div class="star">
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star-half'></span>
+            <span class='bx bx-star' ></span>
+            <span class='bx bx-star' ></span></div>
+            <p class="text">70 ratings </p>
+            <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+            <p class="verify">Verified</p>
+            <p class="zap"><i class='bx bxs-zap' ></i></p>
+            <p class="responsive">Responsive</p>
+        </div>
+        <!--location-->
+            <div class="location"> <i class='bx bxs-map'></i>
+             <p>Katrap Baldur ,India</p></div>
+        <!--links-->
+            <div class="links"><a href="" class="link">Caterers</a>
+            <a href="" class="link">Wedding </a></div>
+        <!--information-->
+                <div class="information"> 
+                   <p class="call"> <i class='bx bxs-phone' > </i> 6289345629 </p>
+                   <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                   <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                   <p class="trending"><i class='bx bx-trending-up' ></i>64 people recently enquired</p>
+                   
+                </div>
+        </div>
+        
+    </div></a>
+
+
+
+    <!--9th part-->
+   <a href="booking9.html">
+     <div class="service">
+        
+    <div class="img9">
+        
+    </div>
+    <div class="content">
+        <div class="heading"><i class='bx bxs-like'></i> <h1>Shreeji Caterers </h1> </div>
+       <!---ratings--->
+        <div class="ratings"> 
+        <p class="value">4.7</p>
+        <div class="star">
+        <span class='bx bxs-star'></span>
+        <span class='bx bxs-star'></span>
+        <span class='bx bxs-star'></span>
+        <span class='bx bxs-star' ></span>
+        <span class='bx bxs-star-half' ></span></div>
+        <p class="text">175 ratings </p>
+        <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+        <p class="verify">Verified</p>
+        <p class="zap"><i class='bx bxs-zap' ></i></p>
+        <p class="responsive">Popular</p>
+    </div>
+    <!--location-->
+        <div class="location"> <i class='bx bxs-map'></i>
+         <p>Maharaj Singh ,India</p></div>
+    <!--links-->
+        <div class="links"><a href="" class="link">Caterers</a>
+        <a href="" class="link">North Indian</a></div>
+    <!--information-->
+            <div class="information"> 
+               <p class="call"> <i class='bx bxs-phone' > </i> 73982345678 </p>
+               <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+               <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+               <p class="trending"><i class='bx bx-trending-up' ></i>94 people recently enquired</p>
+               
+            </div>
+    </div>
+    
+</div></a>
+
+
+
+    <!--10th part-->
+    <a href="booking10.html">
+        <div class="service">
+        
+        <div class="img10">
+            
+        </div>
+        <div class="content">
+            <div class="heading"><i class='bx bxs-like'></i> <h1>Purav Caterers</h1> </div>
+           <!---ratings--->
+            <div class="ratings"> 
+            <p class="value">3.9</p>
+            <div class="star">
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bx-star' ></span>
+            <span class='bx bx-star' ></span></div>
+            <p class="text">59 ratings </p>
+            <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+            <p class="verify">Verified</p>
+            <p class="zap"><i class='bx bxs-zap' ></i></p>
+            <p class="responsive">Trending</p>
+        </div>
+        <!--location-->
+            <div class="location"> <i class='bx bxs-map'></i>
+             <p>Ambedkar Road,India</p></div>
+        <!--links-->
+            <div class="links"><a href="" class="link">Caterers</a>
+            <a href="" class="link">South Indian</a></div>
+        <!--information-->
+                <div class="information"> 
+                   <p class="call"> <i class='bx bxs-phone' > </i> 7234892745 </p>
+                   <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                   <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                   <p class="trending"><i class='bx bx-trending-up' ></i>59 people recently enquired</p>
+                   
+                </div>
+        </div>
+        
+    </div></a>
+
+
+
+    <!--11th part-->
+    <a href="booking11.html">
+        <div class="service">
+        
+        <div class="img11">
+            
+        </div>
+        <div class="content">
+            <div class="heading"><i class='bx bxs-like'></i> <h1>The Express Caterers </h1> </div>
+           <!---ratings--->
+            <div class="ratings"> 
+            <p class="value">4.4</p>
+            <div class="star">
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star' ></span>
+            <span class='bx bx-star' ></span></div>
+            <p class="text">200 ratings </p>
+            <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+            <p class="verify">Verified</p>
+            <p class="zap"><i class='bx bxs-zap' ></i></p>
+            <p class="responsive">Trending</p>
+        </div>
+        <!--location-->
+            <div class="location"> <i class='bx bxs-map'></i>
+             <p>Mumbai Bypass Road,Thane</p></div>
+        <!--links-->
+            <div class="links"><a href="" class="link">Caterers</a>
+            <a href="" class="link">Chinese</a></div>
+        <!--information-->
+                <div class="information"> 
+                   <p class="call"> <i class='bx bxs-phone' > </i> 6329845387 </p>
+                   <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                   <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                   <p class="trending"><i class='bx bx-trending-up' ></i>77 people recently enquired</p>
+                   
+                </div>
+        </div>
+        
+    </div></a>
+
+
+    <!--12th part-->
+    <a href="booking12.html">
+        <div class="service">
+        
+        <div class="img12">
+            
+        </div>
+        <div class="content">
+            <div class="heading"><i class='bx bxs-like'></i> <h1>Kings Lal Caterers </h1> </div>
+           <!---ratings--->
+            <div class="ratings"> 
+            <p class="value">3.5</p>
+            <div class="star">
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star-half' ></span>
+            <span class='bx bx-star' ></span></div>
+            <p class="text">83 ratings </p>
+            <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+            <p class="verify">Verified</p>
+            <p class="zap"><i class='bx bxs-zap' ></i></p>
+            <p class="responsive">Popular</p>
+        </div>
+        <!--location-->
+            <div class="location"> <i class='bx bxs-map'></i>
+             <p>Kalyan Road,India</p></div>
+        <!--links-->
+            <div class="links"><a href="" class="link">Caterers</a>
+            <a href="" class="link">South Indian</a></div>
+        <!--information-->
+                <div class="information"> 
+                   <p class="call"> <i class='bx bxs-phone' > </i> 9876543291 </p>
+                   <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                   <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                   <p class="trending"><i class='bx bx-trending-up' ></i>49 people recently enquired</p>
+                   
+                </div>
+        </div>
+        
+    </div></a>
+
+
+
+    <!--13th part-->
+    <a href="booking13.html">
+        <div class="service">
+        
+        <div class="img13">
+            
+        </div>
+        <div class="content">
+            <div class="heading"><i class='bx bxs-like'></i> <h1>Gadgil Caterers </h1> </div>
+           <!---ratings--->
+            <div class="ratings"> 
+            <p class="value">4.7</p>
+            <div class="star">
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star'></span>
+            <span class='bx bxs-star' ></span>
+            <span class='bx bx-star' ></span></div>
+            <p class="text">129 ratings </p>
+            <p class="veri"><i class='bx bxs-checkbox-checked' ></i></p>
+            <p class="verify">Verified</p>
+            <p class="zap"><i class='bx bxs-zap' ></i></p>
+            <p class="responsive">Responsive</p>
+        </div>
+        <!--location-->
+            <div class="location"> <i class='bx bxs-map'></i>
+             <p>Ganesh Mandir,India</p></div>
+        <!--links-->
+            <div class="links"><a href="" class="link">Caterers</a>
+            <a href="" class="link">Chinese</a></div>
+        <!--information-->
+                <div class="information"> 
+                   <p class="call"> <i class='bx bxs-phone' > </i> 9876539591 </p>
+                   <p class="enquiry"> <i class='bx bxl-telegram' > </i>Send Enquiry</p>
+                   <p class="chat "><i class='bx bxs-chat' ></i>Chat</p>
+                   <p class="trending"><i class='bx bx-trending-up' ></i>67 people recently enquired</p>
+                   
+                </div>
+        </div>
+        
+    </div></a>
+
+</div>
+
+</body>
+</html>
